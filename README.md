@@ -17,6 +17,12 @@ Works for Vue 2 & 3.
 npm i @seregpie/echarts-vue
 ```
 
+---
+
+```js
+import {VueChart} from '@seregpie/echarts-vue';
+```
+
 ### browser
 
 ```html

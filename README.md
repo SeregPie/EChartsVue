@@ -19,7 +19,7 @@ npm i @seregpie/echarts-vue
 
 ---
 
-```js
+```javascript
 import {VueChart} from '@seregpie/echarts-vue';
 ```
 

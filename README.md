@@ -35,7 +35,7 @@ import {VueChart} from '@seregpie/echarts-vue';
 
 <script src="https://unpkg.com/vue-demi"></script>
 <script src="https://unpkg.com/@seregpie/vue-resize-sensor"></script>
-<script src="https://unpkg.com/echarts@4/dist/echarts.min.js"></script>
+<script src="https://unpkg.com/echarts@5/dist/echarts.min.js"></script>
 <script src="https://unpkg.com/@seregpie/echarts-vue"></script>
 ```
 
@@ -63,7 +63,7 @@ import {VueChart} from '@seregpie/echarts-vue';
 
 export default {
   components: {
-    [VueChart.name]: VueChart,
+    VueChart,
   },
   // ...
 };
@@ -74,10 +74,7 @@ export default {
 ```vue
 <template>
   <vue-chart
-    style="
-      width: 600px;
-      height: 400px;
-    "
+    style="width: 600px; height: 400px"
     :options="chartOptions"
   />
 </template>
@@ -91,7 +88,7 @@ export default {
     return {
       products: [
         {name: 'shirt', sales: 5},
-        {name: 'cardign', sales: 20},
+        {name: 'cardigan', sales: 20},
         {name: 'chiffon shirt', sales: 36},
         {name: 'pants', sales: 10},
         {name: 'heels', sales: 10},
@@ -111,11 +108,11 @@ export default {
           data: products.map(({name}) => name),
         },
         yAxis: {},
-        series: [{
+        series: {
           name: 'sales',
           data: products.map(({sales}) => sales),
           type: 'bar',
-        }],
+        },
       };
     },
   },

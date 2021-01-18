@@ -1,4 +1,4 @@
-import * as echarts from 'echarts/lib/echarts';
+import * as echarts from 'echarts/core';
 import {
 	defineComponent,
 	h,
@@ -6,12 +6,11 @@ import {
 	onMounted,
 	onUnmounted,
 	ref,
-	Vue,
 	watchEffect,
 } from 'vue-demi';
 import VueResizeSensor from '@seregpie/vue-resize-sensor';
 
-let component = defineComponent({
+export default defineComponent({
 	name: 'VueChart',
 	props: {
 		options: {
@@ -63,23 +62,10 @@ let component = defineComponent({
 							position: 'absolute',
 							width: '100%',
 						},
-						...(isVue2
-							? {
-								ref: 'el',
-							}
-							: {
-								ref: elRef,
-							}
-						),
+						ref: isVue2 ? 'el' : elRef,
 					},
 				)],
 			);
 		});
 	},
 });
-
-if (isVue2 && globalThis.window) {
-	Vue.component(component.name, component);
-}
-
-export default component;

@@ -1,11 +1,11 @@
+import {babel} from '@rollup/plugin-babel';
 import {terser} from 'rollup-plugin-terser';
-import babel from '@rollup/plugin-babel';
 
 import {main} from './package.json';
 
 let globals = {
 	'@seregpie/vue-resize-sensor': 'VueResizeSensor',
-	'echarts/lib/echarts': 'echarts',
+	'echarts/core': 'echarts',
 	'vue-demi': 'VueDemi',
 };
 

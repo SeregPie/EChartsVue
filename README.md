@@ -79,9 +79,19 @@ export default {
   />
 </template>
 <script>
-import 'echarts/lib/chart/bar';
-import 'echarts/lib/component/title';
-import 'echarts/lib/component/tooltip';
+import {BarChart} from 'echarts/charts';
+import {
+  TitleComponent,
+  TooltipComponent,
+} from 'echarts/components';
+import {CanvasRenderer} from 'echarts/renderers';
+import {use} from 'echarts/core';
+use([
+  BarChart,
+  CanvasRenderer,
+  TitleComponent,
+  TooltipComponent,
+]);
 
 export default {
   data() {

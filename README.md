@@ -1,6 +1,6 @@
 # EChartsVue
 
-A simple wrapper for ECharts.
+A simple Vue wrapper for ECharts.
 
 Works for Vue 2 & 3.
 

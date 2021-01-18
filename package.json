@@ -1,7 +1,7 @@
 {
 	"name": "@seregpie/echarts-vue",
 	"version": "1.0.0",
-	"description": "A simple wrapper for ECharts.",
+	"description": "A simple Vue wrapper for ECharts.",
 	"keywords": [
 		"component",
 		"echarts",
